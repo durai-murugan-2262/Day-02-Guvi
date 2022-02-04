@@ -1,0 +1,56 @@
+Date: 23-01-22
+
+1. Difference between Browser JS and NodeJS.
+
+Node JS:
+  It is a lightweight scripting language.
+  It is an object oriented language.
+  It is used for developing HTML pages that are dynamic.
+  It is the ECMA script's updated version.
+  It has the concept of prototype inheritance.
+
+Browser JS:
+  It is a JS runtime environment that runs Javascript on the server-side.
+  It is cross platformand it can run JS code outside of any browser.
+  It has many modules in the process of web development.
+  It isn't capable to add various HTML tags.
+  It can access when run the javascript via node interpreters or in the V8 engine.
+
+
+2. How does the Browser actually renders the website.(youtube)
+ANS: 
+	*The HTML and the CSS parsers are combined into the render tree depending on the Browser.
+	*Then it layout the render tree and paint in on the page.
+	*Tokenisation will takes the text and convert into tokens.
+	*Then it will create a parse tree and a DOM tree.
+	*Parse tree is a representation of the HTML.
+	*Then it will create DOM tree to interact with Javascript.
+
+4.
+
+a.typeof(1)
+ans: Number
+
+b.typeof(1.1)
+ans: Number
+
+c.typeof('1.1')
+ans: String
+
+d.typeof(true)
+ans: Boolean
+
+e.typeof(null)
+ans: Object
+
+f.typeof(undefined)
+ans: Undefined
+
+g.typeof([])
+ans: Object
+
+h.typeof({})
+ans: Object
+
+i.typeof(NaN)
+ans: Number
