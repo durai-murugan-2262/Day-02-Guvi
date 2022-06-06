@@ -17,40 +17,61 @@ Browser JS:
   It can access when run the javascript via node interpreters or in the V8 engine.
 
 
-2. How does the Browser actually renders the website.(youtube)
-ANS: 
-	*The HTML and the CSS parsers are combined into the render tree depending on the Browser.
-	*Then it layout the render tree and paint in on the page.
-	*Tokenisation will takes the text and convert into tokens.
-	*Then it will create a parse tree and a DOM tree.
-	*Parse tree is a representation of the HTML.
-	*Then it will create DOM tree to interact with Javascript.
+2. Write a blog about objects and its internal representation in Javascript.
+ANS:
+DEFINE OBJECT:
+	Objects, in JavaScript, is it’s most important data-type and forms the building blocks for modern JavaScript. These objects are quite different from JavaScript’s primitive data-types(Number, String, Boolean, null, undefined and symbol) in the sense that while these primitive data-types all store a single value each (depending on their types).
 
-4.
+	Objects in JavaScript may be defined as an unordered collection of related data, of primitive or reference types, in the form of “key: value” pairs. These keys can be variables or functions and are called properties and methods, respectively, in the context of an object.
 
-a.typeof(1)
-ans: Number
+  Eg:
+	If your object is a student, it will have properties like name, age, address, id, etc and methods like updateAddress, updateNam, etc.
 
-b.typeof(1.1)
-ans: Number
+Creating Objects In JavaScript :
 
-c.typeof('1.1')
-ans: String
+Create JavaScript Object with Object Literal
 
-d.typeof(true)
-ans: Boolean
+	One of easiest way to create a javascript object is object literal, simply define the property and values inside curly braces.
+  Eg:
+  	let bike = {name: 'SuperSport', maker:'Ducati', engine:'937cc'};
+	
+Create JavaScript Object with Constructor
 
-e.typeof(null)
-ans: Object
+	Constructor is nothing but a function and with help of new keyword, constructor function allows to create multiple objects of same flavor
+  Eg:
+  	function Vehicle(name, maker) {
+	   this.name = name;
+	   this.maker = maker;
+	}
+	let car1 = new Vehicle(’Fiesta’, 'Ford’);
+	let car2 = new Vehicle(’Santa Fe’, 'Hyundai’)
+	console.log(car1.name);    //Output: Fiesta
+	console.log(car2.name);    //Output: Santa Fe
+	
+Using the JavaScript Keyword new:
+	We can also create an object using the new keyword
+  Eg:
+  	var person = new Object();
+	person.firstName = “John”;
+	person.lastName = “Doe”;
+	person.age = 50;
+	person.eyeColor = “blue”;
 
-f.typeof(undefined)
-ans: Undefined
-
-g.typeof([])
-ans: Object
-
-h.typeof({})
-ans: Object
-
-i.typeof(NaN)
-ans: Number
+Using the Object.create method
+	Objects can also be created using the Object.create() method. This method can be very useful, because it allows you to choose the prototype object for the object you want to create, without having to define a constructor function.
+  Eg:
+  	// Animal properties and method encapsulation
+	var Animal = {
+	  type: 'Invertebrates', // Default value of properties
+	  displayType: function() {  // Method which will display type of Animal
+	    console.log(this.type);
+	  }
+	};
+	// Create new animal type called animal1 
+	var animal1 = Object.create(Animal);
+	animal1.displayType(); // Output:Invertebrates
+	// Create new animal type called Fishes
+	var fish = Object.create(Animal);
+	fish.type = 'Fishes';
+	fish.displayType(); 
+	// Output:Fishes
